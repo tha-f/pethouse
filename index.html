@@ -596,7 +596,7 @@ footer{
 
  <button
  class="buy-btn"
- onclick="addToCart('Bifinho Magnus Cães Pequeno Porte Sabor Carne',7.00)">
+ onclick="addToCart('Bifinho Magnus Cães Pequeno Porte Sabor Carne',07.00)">
  Adicionar ao Carrinho
  </button>
 
@@ -827,38 +827,20 @@ O objetivo é evoluir sem perder nossa essência: honestidade, qualidade e respe
 
 <div class="cart" id="cart">
 
- <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
-
-  <h2>Seu Carrinho</h2>
-
-  <button
-   onclick="toggleCart()"
-   style="
-   border:none;
-   background:#ff4fa0;
-   color:white;
-   width:40px;
-   height:40px;
-   border-radius:50%;
-   cursor:pointer;
-   font-size:22px;
-   font-weight:bold;
-   ">
-   ×
-  </button>
-
- </div>
+ <h2>Seu Carrinho</h2>
 
  <div id="cart-items"></div>
 
  <div class="cart-total">
-  Total: R$ <span id="cart-total">0.00</span>
+ Total: R$ <span id="cart-total">0.00</span>
  </div>
 
  <button
-  class="btn finish-btn"
-  onclick="finishOrder()">
-  Finalizar Pedido
+ class="btn finish-btn"
+ onclick="finishOrder()">
+
+ Finalizar Pedido
+
  </button>
 
 </div>
@@ -989,16 +971,16 @@ function finishOrder(){
 
  cart.forEach(item => {
 
- message += • ${item.name} - R$ ${item.price.toFixed(2)}%0A;
+ message += `• ${item.name} - R$ ${item.price.toFixed(2)}%0A`;
 
  total += item.price;
 
  });
 
- message += %0A Total: R$ ${total.toFixed(2)};
+ message += `%0A Total: R$ ${total.toFixed(2)}`;
 
  window.open(
- https://wa.me/5534996829420?text=${message},
+ `https://wa.me/5534996829420?text=${message}`,
  '_blank'
  );
 
